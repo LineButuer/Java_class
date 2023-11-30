@@ -18,6 +18,23 @@ public class Ex01_ArithmeticOperator {
 		System.out.println(num1/num2);
 		System.out.println(num1%num2);
 	
+	
+		int sumResult = num1 + num2;
+		System.out.println(sumResult);
+		
+		int subResult = num1 - num2;
+		System.out.println(subResult);
+		
+		int mulResult = num1 * num2;
+		System.out.println(mulResult);
+		
+		int divResult = num1 / num2;
+		System.out.println(divResult);
+		
+		int remainResult = num1 % num2;
+		System.out.println(remainResult);
+		
+		
 	}
 
 }
