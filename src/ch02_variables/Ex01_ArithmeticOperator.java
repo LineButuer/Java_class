@@ -34,7 +34,12 @@ public class Ex01_ArithmeticOperator {
 		int remainResult = num1 % num2;
 		System.out.println(remainResult);
 		
+		boolean a = true;
+		System.out.println(!a);
+	
+		String name = "이태양";
 		
+		System.out.println(name);
 	}
 
 }
