@@ -14,6 +14,7 @@ public class Ex02_ComparisonOperator {
 		result = false;
 		boolean bool1 = true;
 		System.out.println(result);
+		// 변수값을 다른 변수에 대입하는 것은 복사 개념  result = boolean == result false -> result true
 		result = bool1;
 		System.out.println(result);
 		System.out.println(bool1);
