@@ -40,7 +40,7 @@ public class Ex08_IfExample {
 			}
 		}
 		System.out.println("The biggest number is " + number);
-
+		System.out.println("hi");
 	}
 
 }
