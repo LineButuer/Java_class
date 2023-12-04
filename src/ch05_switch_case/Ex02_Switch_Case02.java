@@ -33,7 +33,7 @@ public class Ex02_Switch_Case02 {
             break;
         default:
             word = "이해할 수 없습니다.";
-
+        break;
     }
         System.out.println(word);
 
