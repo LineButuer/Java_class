@@ -15,8 +15,10 @@ public class Ex06_IfExample {
 		num1 = scanner.nextInt();
 		String what = "";
 		
-		
-		if(num1%3 ==0 && num1%5==0) {
+		if(num1 ==0) {
+			what = "0";
+		}
+		else if(num1%3 ==0 && num1%5==0) {
 			what ="3과 5의 공배수";
 		}else if(num1%3==0) {
 			what = "3의 배수";
