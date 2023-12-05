@@ -7,22 +7,26 @@ public class Ex07_NestedFor {
         /**
          * 중첩 for문
          */
-        System.out.println("구구단 시작");
 
+        int i = 0;
+        int j = 0;
 
+        for (i = 1; i <= 9; i++) {
+            System.out.println(i + " 단 ");
+            for (j = 1; j <= 9; j++) {
+                if (j < 9) {
+                    System.out.print(i + "x" + j + " = " + (i * j) + "  ");
+                } else {
+                    System.out.println(i + "x" + j + " = " + (i * j));
+                    System.out.println("\t");
+                }
 
+            }
 
-        for(int a = 1; a <=9; a++) {
-            System.out.println(a + " 단");
-            for (int j = 1; j <= 9; j++) {
-
-                System.out.print(a + " x " + j + " = " + (a * j) + " ");
-
-            }System.out.println(" ");
         }
 
-
-        }
 
     }
+
+}
 
