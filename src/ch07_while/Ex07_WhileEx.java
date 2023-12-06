@@ -25,30 +25,48 @@ public class Ex07_WhileEx {
 //            }
 //        }System.out.println("sum  = " + sum);
 
-        // 합계용 변수
-        int sum =0;
-        //1,2,3,4,5,6,7,8~~
-        int count = 1;
-        //1, -2, -3, -4 ~~
+//        // 합계용 변수
+//        int sum =0;
+//        //1,2,3,4,5,6,7,8~~
+//        int count = 1;
+//        //1, -2, -3, -4 ~~
+//        int num = 0;
+//        // 부호용 변수
+//        int s =1;
+//        boolean run =true;
+//        while (run){
+//            sum+=num;
+//            if(sum>=100){
+//                run = false;
+//            }else {
+//                num = s * count;
+//                s = -s; //1, -1, 1, -1
+//                count++;
+//            }
+//            System.out.println("num = " + num);
+//            System.out.println("sum = " +sum);
+//
+//        }
+
+        int sum = 0;
+        int i = 1;
+        int c = 1;
         int num = 0;
-        // 부호용 변수
-        int s =1;
-        boolean run =true;
-        while (run){
-            sum+=num;
-            if(sum>=100){
+        boolean run = true;
+
+        while (run) {
+            sum += num;
+            if (sum >= 100) {
                 run = false;
-            }else {
-                num = s * count;
-                s = -s; //1, -1, 1, -1
-                count++;
+
+            } else {
+                num = i * c;
+                c = c * -1;
+                i++;
             }
+            System.out.println("sum = " + sum);
             System.out.println("num = " + num);
-            System.out.println("sum = " +sum);
-
         }
-
-
 
 
     }
