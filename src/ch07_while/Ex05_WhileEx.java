@@ -48,6 +48,7 @@ public class Ex05_WhileEx {
             } else {
                 System.out.println("정답입니다.");
                 System.out.println("당신은 " + count + " 번 시도하셨습니다.");
+            run = false;
             }
 
         }
