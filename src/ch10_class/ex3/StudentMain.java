@@ -16,6 +16,10 @@ public class StudentMain {
         // 매개변수 3개 있는 객체
         Student student4 = new Student("정대만", "체육학", "010-3333-3333");
 
+        Student student5 = new Student("강백호");
+
+
+
 
     }
 }
