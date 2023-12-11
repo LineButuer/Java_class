@@ -11,6 +11,8 @@ public class StudentMain {
         // 매개변수 있는 생성자로 student2 객체 생성
         Student student2 = new Student("학생2", "010-2222-2222", "logistics" );
         System.out.println("student2.studentName = " + student2.studentName);
+        System.out.println("student2.studentNumber = " + student2.studentNumber);
+        System.out.println("student2.studentMajor = " + student2.studentMajor);
     }
 
 }
