@@ -6,7 +6,7 @@ public class Student {
     String studentNumber;
     String studentMajor;
 
-
+//
     // 기본 생성자
     public Student() {
         System.out.println("student 기본 생성자");
