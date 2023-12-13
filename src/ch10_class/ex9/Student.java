@@ -21,6 +21,18 @@ public class Student {
         System.out.println("studentName = " + studentName);
     }
 
+    public void setStudentMobile(String studentMobile) {
+        this.studentMobile = studentMobile;
+    }
+
+    public void setStudentNumber(int studentNumber) {
+        this.studentNumber = studentNumber;
+    }
+
+    public void setStudentMajor(String studentMajor) {
+        this.studentMajor = studentMajor;
+    }
+
     public void setStudent (String studentName, String studentMajor, String studentMobile, int studentNumber){
         this.studentName = studentName;
         this.studentMajor = studentMajor;
@@ -45,6 +57,35 @@ public class Student {
     public String getStudentName(){
 
         return studentName;
+
+
+
+
+
+    }
+
+    /**
+     * method name : toString
+     * return type : String
+     * parameter : x
+     * @return
+     */
+
+
+
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentName='" + studentName + '\'' +
+                ", studentNumber=" + studentNumber +
+                ", studentMajor='" + studentMajor + '\'' +
+                ", studentMobile='" + studentMobile + '\'' +
+                '}';
+    }
+
+    public void print(){
+        System.out.println("이름 " + studentName + " 학번 " + studentNumber + " 학과 " + studentMajor + " 전화번호 " + studentMobile);
     }
 
 

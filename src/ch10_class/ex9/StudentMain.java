@@ -32,6 +32,7 @@ public class StudentMain {
         int studentNumber = student.getStudentNumber();
         System.out.println("studentNumber = " + studentNumber);
 
-        
+        student.print();
+        System.out.println("Student = " + student);
     }
 }
