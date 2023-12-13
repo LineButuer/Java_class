@@ -2,24 +2,23 @@ package ch10_class.ex11;
 
 public class Boardme {
 
-//     게시글 클래스
+    //     게시글 클래스
 //     필드
 //     글번호(id) - Long 타입
-    Long  id; //Long은 클래스 타입이라 결과값이 null로 나옴 아예 데이터가 없다는 뜻
-//     제목(boardTitle)
+    Long id; //Long은 클래스 타입이라 결과값이 null로 나옴 아예 데이터가 없다는 뜻
+    //     제목(boardTitle)
     String boardTitle;
-//     작성자(boardWriter)
+    //     작성자(boardWriter)
     String boardWriter;
-//     내용(boardContents)
+    //     내용(boardContents)
     String boardContents;
-//     조회수(boardHits)
+    //     조회수(boardHits)
     int boardHits;
 
     public Boardme() {
 
     }
 //
-
 
 
 //     필드에 대한 getter/setter
@@ -100,20 +99,17 @@ public class Boardme {
 //     단 출력하기 전에 조회수 값을 1 증가 시켜야 한다. i++ 그냥 쓰면 될 거 같고
 //
 
-public void findById(Long id) {
+    public Boardme findById(Long id) {
         if (id.equals(this.id)) {
-            this.boardHits ++;
-            System.out.print("번호 "+this.id);
-            System.out.print(" 제목 "+boardTitle);
-            System.out.println(" 작가 "+boardWriter);
-            System.out.println("내용 "+boardContents);
-
-
-        }else {
-            System.out.println("잘못된 id입니다.");
+            this.boardHits++;
+            System.out.println("번호: " + this.id);
+            System.out.println("제목: " + boardTitle);
+            System.out.println("작가: " + boardWriter);
+            System.out.println("내용: " + boardContents);
+            return this; // 조회된 객체 반환
+        } else {
+            System.out.println("해당 ID의 글을 찾을 수 없습니다.");
+            return null; // ID가 일치하지 않을 경우 null 반환
+        }
     }
-
-}
-
-
 }
