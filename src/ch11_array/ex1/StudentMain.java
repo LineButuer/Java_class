@@ -1,8 +1,9 @@
-package ch11_array;
+package ch11_array.ex1;
+
+import ch11_array.ex1.Student;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class StudentMain {
 
