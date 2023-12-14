@@ -42,7 +42,7 @@ public class StudentMain {
             System.out.println("studentList.get(i).getStudentName() = " + studentList.get(i).getStudentName());
         }
 
-        // for each
+        // for each 특정 인덱스 값만 따로 추출은 못하고 만약 하려면 조건문으로 안에 따로 만들거나 아니면 그냥 따로 쓰는게 낫다고 함
         for (Student stu : studentList){
             System.out.println("stu = " + stu);
             // 이름만

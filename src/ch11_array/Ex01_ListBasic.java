@@ -65,11 +65,5 @@ public class Ex01_ListBasic {
         for(String a : strList){
             System.out.println("a = " + a);
         }
-
-
-
-
-
-
     }
 }
