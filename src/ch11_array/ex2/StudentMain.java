@@ -22,7 +22,9 @@ public class StudentMain {
                 System.out.println("메서드 호출 후");
 
             } else if (selectNo==2) {
+                System.out.println("메서드 호출 전");
                 studentServices.method2();
+                System.out.println("메서드 호출 후");
             } else if (selectNo==3) {
                 studentServices.method3();
             } else if (selectNo==4) {

@@ -13,6 +13,7 @@ public class StudentService {
         studentRepository.method1();
     }public void method2(){
         System.out.println("StudentService.method2");
+        studentRepository.method2("가나 초콜릿");
     }public void method3(){
         System.out.println("StudentService.method3");
     }
