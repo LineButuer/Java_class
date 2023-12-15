@@ -29,11 +29,11 @@ public class StudentMain {
                 studentServices.method3();
             } else if (selectNo == 4) {
                 studentServices.method4();
-            } else if (selectNo == 4) {
-                studentServices.method4();
-            }else if (selectNo == 5) {
+            } else if (selectNo == 5) {
                 studentServices.method5();
             }else if (selectNo == 6) {
+                studentServices.method5();
+            }else if (selectNo == 7) {
                 run = false;
             }
 
