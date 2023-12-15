@@ -16,18 +16,24 @@ public class StudentMain {
             System.out.println("--------------------------------------------------------------");
             System.out.print("선택> ");
             selectNo = scan.nextInt();
-            if (selectNo==1){
+            if (selectNo == 1) {
                 System.out.println("메서드 호출 전");
                 studentServices.method1();
                 System.out.println("메서드 호출 후");
 
-            } else if (selectNo==2) {
+            } else if (selectNo == 2) {
                 System.out.println("메서드 호출 전");
                 studentServices.method2();
                 System.out.println("메서드 호출 후");
-            } else if (selectNo==3) {
+            } else if (selectNo == 3) {
                 studentServices.method3();
-            } else if (selectNo==4) {
+            } else if (selectNo == 4) {
+                studentServices.method4();
+            } else if (selectNo == 4) {
+                studentServices.method4();
+            }else if (selectNo == 5) {
+                studentServices.method5();
+            }else if (selectNo == 6) {
                 run = false;
             }
 
