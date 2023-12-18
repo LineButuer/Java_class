@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class BookRepository {
     // 도서 정보를 관리하는 bookDTOList
-    private static List<BookDTO> bookDTOList = new ArrayList<>();
+    private static final List<BookDTO> bookDTOList = new ArrayList<>();
     /**
      * 도서등록 메서드
      * name: save
@@ -83,7 +83,7 @@ public class BookRepository {
             // 저장되어 있는 도서명에 검색어가 포함되어 있으면 true
             if (bookDTOList.get(i).getBookTitle().contains(bookTitle)) {
                 // 조건을 만족하면 bookDTOS 에 추가
-//                bookDTOS.add(bookDTOList.get(i));
+////                bookDTOS.add(bookDTOList.get(i));
                 BookDTO bookDTO = bookDTOList.get(i);
                 bookDTOS.add(bookDTO);
             }
