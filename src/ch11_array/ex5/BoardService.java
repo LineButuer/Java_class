@@ -5,8 +5,17 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BoardService {
+    public void boardList() {
+        List<BoardDTO> boardDTOList = boardRepository.boardlist();
+//        System.out.println("id\t" + "title\t" + "writer\t" + "hits\t");
+        for (BoardDTO boardDTO : boardDTOList){
+            System.out.println("글목록 : " + boardDTO);
+//            System.out.println(boardDTO.getId()+"\t"+boardDTO.getBoardTitle()+"\t"+boardDTO.getBoardWriter()+"\t"+boardDTO.getBoardHits()+"\t");
+        }
+    }
     BoardRepository boardRepository = new BoardRepository();
     Scanner scanner = new Scanner(System.in);
+
     public void save() {
 
         System.out.println("제목을 입력하세요.");
@@ -24,13 +33,6 @@ public class BoardService {
             System.out.println("등록되었습니다.");
         } else {
             System.out.println("등록에 실패했습니다. 다시 입력하세요.");
-        }
-    }
-
-    public void boardList() {
-        List<BoardDTO> boardDTOList = boardRepository.boardlist();
-        for (BoardDTO boardDTO : boardDTOList){
-            System.out.println("글목록 : " + boardDTO);
         }
     }
 

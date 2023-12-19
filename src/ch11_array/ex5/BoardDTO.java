@@ -8,6 +8,15 @@ public class BoardDTO {
     private Long id;
 
     private int boardHits;
+
+    public int getBoardHits() {
+        return boardHits;
+    }
+
+    public void setBoardHits(int boardHits) {
+        this.boardHits = boardHits;
+    }
+
     public String getBoardTitle() {
         return boardTitle;
     }
