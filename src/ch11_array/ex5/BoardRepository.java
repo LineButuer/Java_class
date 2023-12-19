@@ -30,6 +30,13 @@ public class BoardRepository {
 //        return false;
 //    }
 
+    public BoardDTO findId(Long id){
+        for(int i=0; i<boardDTOList.size(); i++){
+            if(id.equals(boardDTOList.get(i).getId())){
+                return boardDTOList.get(i);
+            }
+        }return null;
+    }
 
 
     public boolean serch(Long id){
