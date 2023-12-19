@@ -37,8 +37,12 @@ public class BoardService {
     }
 
     public void serch(){
+        // 조회수를 1증가
+
+        // 상세내용 가져옴
         System.out.println("찾는 글의 번호를 입력하세요.");
         Long id = scanner.nextLong();
+//        boolean result = boardRepository.updateHits(id);
         System.out.println(id + " 번 글 내용");
         boardRepository.serch(id);
        }
