@@ -7,10 +7,11 @@ import java.util.Scanner;
 public class BoardService {
     public void boardList() {
         List<BoardDTO> boardDTOList = boardRepository.boardlist();
-//        System.out.println("id\t" + "title\t" + "writer\t" + "hits\t");
+//        System.out.println("id\t" + "title\t" + "writer\t" + "hits\t + date\t");
         for (BoardDTO boardDTO : boardDTOList){
             System.out.println("글목록 : " + boardDTO);
-//            System.out.println(boardDTO.getId()+"\t"+boardDTO.getBoardTitle()+"\t"+boardDTO.getBoardWriter()+"\t"+boardDTO.getBoardHits()+"\t");
+//            System.out.println(boardDTO.getId()+"\t"+boardDTO.getBoardTitle()+"\t"+boardDTO.getBoardWriter()+"\t"+boardDTO.getBoardHits()+"\t"+
+//            boardDTO.getCreatedAT() + "\t");
         }
     }
     BoardRepository boardRepository = new BoardRepository();

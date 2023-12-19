@@ -1,13 +1,16 @@
 package ch11_array.ex5;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class BoardDTO {
     private String boardTitle;
     private String boardWriter;
     private String boardContents;
     private String boardPassword;
     private Long id;
-
     private int boardHits;
+    private String createdAt;
 
     public int getBoardHits() {
         return boardHits;
@@ -57,6 +60,14 @@ public class BoardDTO {
         this.id = id;
     }
 
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
     public  static Long idValue = 1L;
 
 
@@ -70,14 +81,20 @@ public class BoardDTO {
         this.boardContents = boardContents;
         this.boardPassword = boardPassword;
         this.boardHits = 0;
+        this.createdAt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:MM:SS"));
     }
+
 
     @Override
     public String toString() {
-        return "글목록{" +
-                "제목='" + boardTitle + '\'' +
-                ", 작성자='" + boardWriter + '\'' +
-                ", 글번호=" + id +
+        return "BoardDTO{" +
+                "boardTitle='" + boardTitle + '\'' +
+                ", boardWriter='" + boardWriter + '\'' +
+                ", boardContents='" + boardContents + '\'' +
+                ", boardPassword='" + boardPassword + '\'' +
+                ", id=" + id +
+                ", boardHits=" + boardHits +
+                ", createdAt='" + createdAt + '\'' +
                 '}';
     }
 }
