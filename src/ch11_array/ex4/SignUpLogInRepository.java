@@ -1,6 +1,8 @@
 package ch11_array.ex4;
 
 
+import ch11_array.ex5.BoardDTO;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,4 +64,7 @@ public class SignUpLogInRepository {
       }
       return result;
    }
+
+
+
 }
