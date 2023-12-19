@@ -38,7 +38,7 @@ public class SignUpLogInService {
         String passWord = scanner.next();
 
         boolean result = signUpLogInRepository.login(id, passWord);
-        boolean run = true;
+//        SignUpLogInDTO loginResult = signUpLogInRepository.login(id, passWord);
 
 
             if (result) {
@@ -68,7 +68,7 @@ public class SignUpLogInService {
         if (loginEmail != null) {
             System.out.println("수정 할 전화번호를 입력하세요.");
             String mobile = scanner.next();
-            boolean result = signUpLogInRepository.update(mobile);
+            boolean result = signUpLogInRepository.update(loginEmail, mobile);
             if (result) {
                 System.out.println("변경되었습니다.");
             } else {

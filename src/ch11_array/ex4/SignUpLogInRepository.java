@@ -19,7 +19,8 @@ public class SignUpLogInRepository {
 
    public boolean login(String loginEmail, String password) {
      boolean result = false;
-      for(int i =0; i<signUpLogInDTOList.size(); i++){
+
+     for(int i =0; i<signUpLogInDTOList.size(); i++){
          if(loginEmail.equals(signUpLogInDTOList.get(i).getMemberEmail())){
             if(password.equals(signUpLogInDTOList.get(i).getMemberPassword())){
                result = true;
@@ -40,7 +41,7 @@ public class SignUpLogInRepository {
    }
 
 
-   public boolean update(String mobile) {
+   public boolean update(String email ,String mobile) {
       boolean result = false;
        for (SignUpLogInDTO signUpLogInDTO : signUpLogInDTOList) {
            if (mobile.equals(signUpLogInDTO.getMemberMobile())) {
