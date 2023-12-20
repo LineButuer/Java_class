@@ -1,5 +1,8 @@
 package ch11_array.ex6;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class AccountDTO {
     private Long id;
     private String accountNumber;
@@ -49,12 +52,15 @@ public class AccountDTO {
     }
 
     public static Long idValue=1L;
+    public AccountDTO(){
+
+    }
     public AccountDTO(String accountNumber, long deposit, long withdraw, String bankingAt) {
         this.id=idValue++;
         this.accountNumber = accountNumber;
         this.deposit = deposit;
         this.withdraw = withdraw;
-        this.bankingAt = bankingAt;
+        this.bankingAt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 
     @Override
