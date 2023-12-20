@@ -11,7 +11,7 @@ public class BankMain {
         Scanner scanner = new Scanner(System.in);
         while (run) {
             System.out.println("▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽▼▽");
-            System.out.println("1.고객 등록 2.잔액 조회 3.입금 4.츨금 5인.거래내역확 6.계좌이체 7.종료");
+            System.out.println("1.고객 등록 2.잔액 조회 3.입금 4.츨금 5인.거래 내역 확인 6.계좌 이체 7.종료");
             System.out.println("△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲△▲");
             int choice = scanner.nextInt();
             if (choice == 1) {
