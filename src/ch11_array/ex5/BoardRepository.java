@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BoardRepository {
-    List<BoardDTO>boardDTOList=new ArrayList<>();
+    List<BoardDTO> boardDTOList = new ArrayList<>();
 
-    public boolean save(BoardDTO boardDTO){
+    public boolean save(BoardDTO boardDTO) {
 
         return boardDTOList.add(boardDTO);
     }
 
-    public List<BoardDTO> boardlist(){
+    public List<BoardDTO> boardlist() {
         return boardDTOList;
     }
 
@@ -30,28 +30,20 @@ public class BoardRepository {
 //        return false;
 //    }
 
-    public BoardDTO findId(Long id){
-        for(int i=0; i<boardDTOList.size(); i++){
-            if(id.equals(boardDTOList.get(i).getId())){
+    public BoardDTO findId(Long id) {
+        for (int i = 0; i < boardDTOList.size(); i++) {
+            if (id.equals(boardDTOList.get(i).getId())) {
                 return boardDTOList.get(i);
             }
-        }return null;
+        }
+        return null;
     }
 
 
-    public boolean serch(Long id){
+    public boolean edit(Long id, String title, String contents) {
         boolean result = false;
-        for (int i = 0; i<boardDTOList.size(); i++){
-            if(id.equals(boardDTOList.get(i).getId())){
-                System.out.println(boardDTOList.get(i).getBoardContents());
-                result = true;
-            }
-        }return result;
-    }
-    public boolean edit(Long id, String title, String contents){
-        boolean result = false;
-        for(BoardDTO boardDTO : boardDTOList){
-            if (id.equals(boardDTO.getId())){
+        for (BoardDTO boardDTO : boardDTOList) {
+            if (id.equals(boardDTO.getId())) {
                 boardDTO.setBoardContents(contents);
                 boardDTO.setBoardTitle(title);
                 result = true;
@@ -61,8 +53,29 @@ public class BoardRepository {
         return result;
     }
 
+    public boolean delete(Long id) {
+        boolean result = false;
+        for (int i = 0; i < boardDTOList.size(); i++) {
+            if (id.equals(boardDTOList.get(i).getId())) {
+                result = true;
+                boardDTOList.remove(i);
+            }
+        }return result;
+    }
 
+    public List<BoardDTO>search(String q){
+        List<BoardDTO>searchList = new ArrayList<>();
+
+        for (int i = 0; i < boardDTOList.size(); i++) {
+            if(boardDTOList.get(i).getBoardTitle().contains(q)){
+                searchList.add(boardDTOList.get(i));
+            }
+        }return searchList;
+    }
 
 }
+
+
+
 
 
