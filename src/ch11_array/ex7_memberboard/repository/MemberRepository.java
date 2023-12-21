@@ -42,10 +42,18 @@ public class MemberRepository {
             }
         } return false;
     }
-    public boolean editName(String email, String password){
+    public boolean editName(String email, String name){
         for(MemberDTO memberDTO : memberDTOList){
             if (email.equals(memberDTO.getMemberEmail())){
-                memberDTO.setMemberPassword(password);
+                memberDTO.setMemberName(name);
+                return true;
+            }
+        } return false;
+    }
+    public boolean editMobile(String email, String mobile){
+        for(MemberDTO memberDTO : memberDTOList){
+            if (email.equals(memberDTO.getMemberEmail())){
+                memberDTO.setMemberMobile(mobile);
                 return true;
             }
         } return false;

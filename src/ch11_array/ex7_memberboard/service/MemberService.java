@@ -66,6 +66,8 @@ public class MemberService {
         System.out.println("1.password 2.name 3.mobile");
         int memberEdit = scanner.nextInt();
         String password =scanner.next();
+        String name =scanner.next();
+        String mobile =scanner.next();
         if(memberEdit==1){
             boolean result = memberRepository.editPassword(loginEmail, password);
             if(result){
@@ -74,14 +76,14 @@ public class MemberService {
                 System.out.println("수정 실패ㅠㅠ");
             }
         } else if (memberEdit==2) {
-            boolean result = memberRepository.editName(loginEmail);
+            boolean result = memberRepository.editName(loginEmail, name);
             if(result){
                 System.out.println("수정 성공!!");
             } else {
                 System.out.println("수정 실패ㅠㅠ");
             }
         } else if (memberEdit==3) {
-            boolean result = memberRepository.editMobile(loginEmail);
+            boolean result = memberRepository.editMobile(loginEmail, mobile);
             if(result){
                 System.out.println("수정 성공!!");
             }else {
