@@ -55,7 +55,7 @@ public class AccountDTO {
     public AccountDTO(){
 
     }
-    public AccountDTO(String accountNumber, long deposit, long withdraw, String bankingAt) {
+    public AccountDTO(String accountNumber, long deposit, long withdraw) {
         this.id=idValue++;
         this.accountNumber = accountNumber;
         this.deposit = deposit;
