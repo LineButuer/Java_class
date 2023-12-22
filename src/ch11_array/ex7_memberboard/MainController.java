@@ -48,10 +48,12 @@ public class MainController {
                         runner = false;
                     } else if (choice == 1) {
                         boardService.boardWrite();
-                    } else if(choice==2){
+                    } else if (choice == 2) {
                         boardService.boardList();
-                    } else if(choice==3){
+                    } else if (choice == 3) {
                         boardService.findById();
+                    } else if (choice == 4) {
+                        boardService.boardEdit();
                     }
                 }
 
