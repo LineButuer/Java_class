@@ -21,7 +21,7 @@ public class MemberRepository {
         }return false;
     }
 
-    public MemberDTO login(String memberEmail, String memberPassword){
+    public MemberDTO logIn(String memberEmail, String memberPassword){
         for(MemberDTO memberDTO : memberDTOList){
             if(memberEmail.equals(memberDTO.getMemberEmail())&&memberPassword.equals(memberDTO.getMemberPassword())){
                 return memberDTO;
@@ -57,6 +57,15 @@ public class MemberRepository {
                 return true;
             }
         } return false;
+    }
+
+    public boolean memberExit(String email, String password){
+        for(MemberDTO memberDTO : memberDTOList){
+            if(email.equals(memberDTO.getMemberEmail())&&password.equals(memberDTO.getMemberPassword())){
+                memberDTOList.remove(memberDTO);
+                return true;
+            }
+        }return false;
     }
 }
 
