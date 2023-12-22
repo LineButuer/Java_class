@@ -38,6 +38,7 @@ public class MainController {
             } else if (select == 7) {
                 boolean runner = true;
                 while (runner) {
+                    System.out.println("======게시판======");
                     System.out.println("----------------------------------------------------------------");
                     System.out.println("1.글작성 2.글목록 3.글조회 4.글수정 5.글삭제 6.검색 99.sample 0.메인메뉴");
                     System.out.println("----------------------------------------------------------------");
@@ -47,8 +48,14 @@ public class MainController {
                         runner = false;
                     } else if (choice == 1) {
                         boardService.boardWrite();
+                    } else if(choice==2){
+                        boardService.boardList();
+                    } else if(choice==3){
+                        boardService.findById();
                     }
                 }
 
             }
         }
+    }
+}
