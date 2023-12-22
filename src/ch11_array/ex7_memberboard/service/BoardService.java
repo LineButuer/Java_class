@@ -32,6 +32,9 @@ public class BoardService {
             System.out.println("boardDTO = " + boardDTO);
         }
     }
+    public void findById(){
+
+    }
 }
 
 
