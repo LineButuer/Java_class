@@ -1,6 +1,7 @@
 package ch11_array.ex7_memberboard.repository;
 
 import ch11_array.ex7_memberboard.dto.BoardDTO;
+import ch11_array.ex7_memberboard.dto.MemberDTO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,5 +16,14 @@ public class BoardRepository {
     public List<BoardDTO> boardList(){
         return boardDTOList;
     }
+
+    public BoardDTO findById(Long id){
+        for(BoardDTO boardDTO : boardDTOList){
+            if(id.equals(boardDTO.getId())){
+                return boardDTO;
+            }
+        } return null;
+    }
 }
+
 

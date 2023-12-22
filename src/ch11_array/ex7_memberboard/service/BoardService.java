@@ -10,7 +10,8 @@ import static ch11_array.ex7_memberboard.common.CommonVariables.loginEmail;
 
 public class BoardService {
     BoardRepository boardRepository = new BoardRepository();
-    Scanner scanner =new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
+
     public void boardWrite() {
         if (loginEmail != null) {
             System.out.println("제목");
@@ -21,18 +22,33 @@ public class BoardService {
             boolean result = boardRepository.write(boardDTO);
             if (result) {
                 System.out.println("글작성 완료");
-            }else {
+            } else {
                 System.out.println("글작성에 실패했습니다.");
             }
         }
     }
-    public void boardList(){
+
+    public void boardList() {
         List<BoardDTO> boardDTO = boardRepository.boardList();
-        if(boardDTO!=null){
-            System.out.println("boardDTO = " + boardDTO);
+        if (boardDTO != null) {
+            for (int i = 0; i < boardDTO.size(); i++) {
+                System.out.println(" 제목" + " 작성자" + " 조회수 " + "시간 ");
+                System.out.println(boardDTO.get(i).getBoardTitle() + " " + boardDTO.get(i).getBoardWriter() + " " + boardDTO.get(i).getBoardHits() + " " + boardDTO.get(i).getCreatedAt());
+                System.out.println(" ");
+            }
         }
     }
-    public void findById(){
+
+    public void findById() {
+        System.out.println("조회할 글번호를 입력하세요");
+        Long id = scanner.nextLong();
+        BoardDTO result = boardRepository.findById(id);
+        if (result != null) {
+            System.out.println(result);
+            System.out.println("글을 불러왔습니다.");
+        } else {
+            System.out.println("해당하는 글번호가 없습니다.");
+        }
 
     }
 }
