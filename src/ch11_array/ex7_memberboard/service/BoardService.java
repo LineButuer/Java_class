@@ -49,7 +49,22 @@ public class BoardService {
         } else {
             System.out.println("해당하는 글번호가 없습니다.");
         }
+    }
 
+    public void boardEdit() {
+        System.out.println("수정할 글번호");
+        Long id = scanner.nextLong();
+        boolean result = boardRepository.emailCheck(loginEmail);
+        if (result) {
+            System.out.println("수정할 내용");
+            String editContents=scanner.next();
+            BoardDTO boardDTO = boardRepository.boardEdit(id,editContents);
+            if (boardDTO != null) {
+                System.out.println("수정이 완료되었습니다.");
+            }
+        } else {
+            System.out.println("글을 수정할 권한이 없습니다.");
+        }
     }
 }
 

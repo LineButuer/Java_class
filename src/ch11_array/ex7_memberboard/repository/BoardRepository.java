@@ -24,6 +24,24 @@ public class BoardRepository {
             }
         } return null;
     }
+
+    public boolean emailCheck(String email){
+        for (BoardDTO boardDTO : boardDTOList){
+            if(email.equals(boardDTO.getBoardWriter())){
+                return true;
+            }
+        }return false;
+    }
+    public BoardDTO boardEdit(Long id, String editContents){
+        for (BoardDTO boardDTO : boardDTOList){
+            if(id.equals(boardDTO.getId())){
+                boardDTO.setBoardContents(editContents);
+                return boardDTO;
+            }
+        }return null;
+    }
+
 }
+
 
 
