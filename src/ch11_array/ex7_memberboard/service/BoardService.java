@@ -57,13 +57,29 @@ public class BoardService {
         boolean result = boardRepository.emailCheck(loginEmail);
         if (result) {
             System.out.println("수정할 내용");
-            String editContents=scanner.next();
-            BoardDTO boardDTO = boardRepository.boardEdit(id,editContents);
+            String editContents = scanner.next();
+            BoardDTO boardDTO = boardRepository.boardEdit(id, editContents);
             if (boardDTO != null) {
                 System.out.println("수정이 완료되었습니다.");
             }
         } else {
             System.out.println("글을 수정할 권한이 없습니다.");
+        }
+    }
+
+    public void boardDelete() {
+        boolean result = boardRepository.emailCheck(loginEmail);
+        if (result) {
+            System.out.println("삭제할 글번호를 입력하세요");
+            Long id = scanner.nextLong();
+            BoardDTO boardDTO = boardRepository.boardDelete(id);
+            if (boardDTO != null) {
+                System.out.println("삭제되었습니다.");
+            } else {
+                System.out.println("삭제에 실패했습니다.");
+            }
+        } else {
+            System.out.println("글을 삭제할 권한이 없습니다.");
         }
     }
 }

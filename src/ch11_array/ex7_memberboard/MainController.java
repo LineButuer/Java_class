@@ -54,9 +54,11 @@ public class MainController {
                         boardService.findById();
                     } else if (choice == 4) {
                         boardService.boardEdit();
+                    } else if (choice == 5) {
+                        boardService.boardDelete();
                     }
-                }
 
+                }
             }
         }
     }

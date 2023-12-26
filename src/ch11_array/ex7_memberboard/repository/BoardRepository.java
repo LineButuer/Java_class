@@ -40,6 +40,14 @@ public class BoardRepository {
             }
         }return null;
     }
+    public BoardDTO boardDelete(Long id){
+        for(BoardDTO boardDTO : boardDTOList){
+            if(id.equals(boardDTO.getId())){
+                boardDTOList.remove(boardDTO);
+                return boardDTO;
+            }
+        }return null;
+    }
 
 }
 
