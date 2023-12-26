@@ -32,6 +32,16 @@ public class Ex01_MapBasic {
         for(String h : map2.keySet()){
             System.out.println(map2.get(h));
         }
+
+        Map<Long, String> map3 = new HashMap<>();
+        String ss1 = map3.put(1L, "안녕");
+        System.out.println("s1 = " + ss1);
+        String ss2 = map3.put(2L, "hello");
+        System.out.println("ss2 = " + ss2);
+        String ss3 = map3.put(1L, "안녕gktpdy");
+        System.out.println("ss3 = " + ss3);
+        //이 key와 관련된 이전값이 있으면 그 값이 나옴
+
     }
 
 }

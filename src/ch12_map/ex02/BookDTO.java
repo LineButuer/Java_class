@@ -23,7 +23,7 @@ public class BookDTO {
     //    저자(bookAuthor)
     private String bookAuthor;
     //    가격(bookPrice)
-    private String bookPrice;
+    private int bookPrice;
     //    출판사(bookPublisher)
     private String bookPublisher;
 
@@ -51,11 +51,11 @@ public class BookDTO {
         this.bookAuthor = bookAuthor;
     }
 
-    public String getBookPrice() {
+    public int getBookPrice() {
         return bookPrice;
     }
 
-    public void setBookPrice(String bookPrice) {
+    public void setBookPrice(int bookPrice) {
         this.bookPrice = bookPrice;
     }
 
@@ -72,7 +72,7 @@ public class BookDTO {
 
     }
     private static Long idValue = 1L;
-    public BookDTO(String bookTitle, String bookAuthor, String bookPrice, String bookPublisher) {
+    public BookDTO(String bookTitle, String bookAuthor, int bookPrice, String bookPublisher) {
         this.id = idValue++;
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;
